@@ -1,0 +1,44 @@
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    margin: 2px;
+}
+
+.cell.removing {
+    animation: fadeOut 0.3s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
+@keyframes fallDown {
+    from {
+        transform: translateY(var(--fallDistance));
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.cell.fall {
+    animation: fallDown 0.5s ease;
+}
